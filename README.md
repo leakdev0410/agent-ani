@@ -11,6 +11,10 @@ Telegram `/model`, không cần khởi động lại). System prompt là **perso
 (`internal/memdb`): chỉ trạng thái đang sống + nhật ký gần + vài quan sát nền tảng/gần đây được
 nạp mỗi lượt; chủ đề dài, ngày cũ, quan sát cũ và skill đi qua tool-calling (model tự gọi khi cần).
 
+<p align="center">
+  <img src="docs/screenshots/landing-hero.png" alt="ani-telegram landing hero" width="900">
+</p>
+
 ## Cấu trúc
 ```
 ani-telegram/
