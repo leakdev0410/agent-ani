@@ -1,0 +1,37 @@
+# Secrets & runtime state — never commit
+.env
+/memory/
+/backup/
+
+# Build artifacts
+ani-telegram.exe
+ani-telegram.exe~
+/bin/
+dbtool.exe
+
+# Build outputs inside deploy/ (keep deploy/ docs + unit file tracked)
+deploy/ani-telegram
+deploy/ani-telegram-*.zip
+deploy/memory.db
+deploy/ani.txt
+deploy/.env
+deploy/offset.txt
+deploy/ani-telegram.log
+
+# Local config copied from the template
+configs/.env
+
+# Test artifacts
+coverage.out
+*.test
+
+# Side projects / scratch — these are not part of the bot codebase.
+# They live alongside the repo for convenience but should not be committed.
+agent-ani/
+marketing/
+marketing-directions.html
+*.mp4
+node_modules/
+
+# Pre-public git history backup (safe to delete after first public push).
+.git.old-history-backup/

@@ -1,0 +1,19 @@
+[Unit]
+Description=Ani Telegram Bot
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/root/ani-telegram
+ExecStart=/root/ani-telegram/ani-telegram
+Restart=on-failure
+RestartSec=5
+# EnvironmentFile đọc .env trực tiếp — không cần export tay từng biến.
+EnvironmentFile=/root/ani-telegram/.env
+# Gửi log về journald để host quản lý retention thay vì append file vô hạn.
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
